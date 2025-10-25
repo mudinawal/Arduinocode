@@ -1,0 +1,33 @@
+#include <LiquidCrystal_I2C.h>
+
+#include <Servo.h>
+
+#define pin_servo 9
+LiquidCrystal_I2C lcd(0x27, 18, 2);
+
+Servo servo1;
+void setup() {
+  lcd.begin();
+  lcd.backlight();
+   servo1.attach(pin_servo);
+}
+
+void loop() { 
+
+  servo1.write("0");
+  lcd.print("0");
+  delay(500);
+  lcd.clear();
+  delay(500);
+
+  servo1.write("90");
+  lcd.print("90");
+  delay(500);
+  lcd.clear();
+  delay(500);
+  servo1.write("100");
+  lcd.print("100");
+  delay(500);
+  lcd.clear();
+  delay(500);
+}
