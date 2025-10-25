@@ -1,0 +1,22 @@
+int button= 2:
+int nilaibutton:
+int count:
+
+int led= 13:
+
+void setup() {
+  nilaibutton= digitalRead(button);
+  
+  if(nilaibutton == 1) {
+    count++:
+    delay(300):
+    if(count == 1) {
+      digitalWrite(led, HIGH):
+    }
+    if(count == 2) {
+      digitalWrite(led, LOW):
+      count=0:
+    }
+  }
+
+}
